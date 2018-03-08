@@ -1,0 +1,27 @@
+﻿{  
+  "name": "Detect",  
+  "version": "1.1",  
+ "manifest_version": 2,  
+  "description": "检测敏感词",  
+  "browser_action": {  
+    "default_icon": "icon.png" ,
+    "default_title": "Detect all rights reserved by kingtwoice",
+    "default_popup": "popup.html"
+  },  
+ "content_scripts": [{  
+         "matches": ["http://mmm.xxx.cn/*","http://mmm.xxx.com/*","http://www.xxx.cn/*","http://www.xxx.com/*"],   
+         "js": ["popup.js","jquery.min.js"], 
+	"css":["popup.css"],  
+         "run_at": "document_end",  
+         "all_frames": true   
+    }],
+"permissions": [     
+     "tabs","http://mmm.xxx.cn/*","http://mmm.xxx.com/*","http://www.xxx.cn/*","http://www.xxx.com/*"    
+    ],
+"content_security_policy": "script-src 'self' https://sapi.k780.com; object-src 'self'",
+
+  "background": {
+    "scripts": ["background.js","base64.js","core-min.js","aes.js"],    
+    "persistent": true
+  }   
+}

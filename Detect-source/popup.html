@@ -1,0 +1,23 @@
+<!doctype html>  
+<html>  
+  <head>  
+    <title>AutoFill</title>  
+    <style>  
+      body {  
+        min-width: 100px;  
+        overflow-x: hidden;  
+      }  
+     
+      </style>
+<script src="jquery.min.js"></script>  
+<script src="local.js"></script>
+<script src="base64.js"></script>
+<script src="crypto-js.js"></script>
+      </head>  
+      <body>  
+<button type="button" id="btn">开启</button>
+<div id="drag" style="width:150px;height:40px;border:1px solid #F00">拖拽敏感词txt文件至此</div>
+授权码:<input type="text" placeholder="授权码" id="m" width=70px><button type="button" id="btn_save">保存</button><br>
+剩余时间:<span style="color:red" id="T"></span>
+</body>  
+</html>  
